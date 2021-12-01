@@ -1,0 +1,65 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 1.375em;
+}
+
+.container {
+  flex: 1 1 auto;
+  padding: 1em 0.875em;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.select-container {
+  position: relative;
+
+  &::before, &::after {
+    content: '';
+    width: 12px;
+    height: 1px;
+    background: $COLOR_BLACK;
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    pointer-events: none;
+  }
+
+  &::before {
+    transform: translateX(-4px) rotate(45deg);
+  }
+
+  &::after {
+    transform: translateX(4px) rotate(-45deg);
+  }
+}
+
+.player-dropdown {
+  width: 100%;
+  appearance: none;
+  font-size: 1em;
+  background-color: $COLOR_LIGHTGREY;
+  padding: .8em 1em;
+  border: none;
+  cursor: pointer;
+}

@@ -1,0 +1,74 @@
+.player {
+  background: url('../img/bg_pattern.png') right top no-repeat;
+  margin: auto -1em -0.875em;
+
+  &__img {
+    display: block;
+    margin-left: 1em;
+  }
+
+  &__details {
+    position: relative;
+    background: $COLOR_PINK;
+    color: $COLOR_WHITE;
+    padding: 1em;
+  }
+
+  &__name {
+    margin-bottom: .3em;
+  }
+
+  &__position {
+
+  }
+
+  &__badge {
+    border-radius: 10em;
+    position: absolute;
+    top: 0;
+    right: 1em;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    background: url('../img/badges_sprite.png') 0 0 no-repeat;
+    transform: translateY(-50%);
+
+    &#{&}--1 { background-position: -100px -100px; }
+    &#{&}--11 { background-position: -800px -700px; }
+    &#{&}--12 { background-position: -600px -800px; }
+    &#{&}--21 { background-position: -500px -1000px; }
+    &#{&}--26 { background-position: 0 0; }
+
+    // The rest of the clubs background positions would be populated here.
+  }
+
+  &__stats {
+    margin-top: 1em;
+  }
+
+  &__stat {
+    background: $COLOR_WHITE;
+    color: $COLOR_PURPLE;
+
+    &:not(:last-of-type) {
+      margin-bottom: 2px;
+    }
+  }
+}
+
+.stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5em;
+  box-shadow: 0 0 .4em rgba($COLOR_PURPLE, 25%);
+
+  &__label {
+
+  }
+
+  &__value {
+    font-size: 1.1875em;
+    font-weight: bold;
+  }
+}
