@@ -83,7 +83,7 @@ const PlayerData = () => {
 
     /**
      * I don't love this way of checking but in a real world scenario
-     * you probably request the data from the API is consistent (Mertesacker having no goal_assist attribute).
+     * you'd probably request the data coming from the API is consistent (Mertesacker having no goal_assist attribute).
      */
     const selectedStats = {
       appearances: appearances ? appearances : 0, 
